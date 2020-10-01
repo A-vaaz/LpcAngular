@@ -1,0 +1,15 @@
+<div class="container">
+  <label>نام کاربری:</label
+  ><input style="margin-right: 20px" type="text" [(ngModel)]="userName" />
+  <br />
+  <label>گذرواژه:</label
+  ><input style="margin-right: 38px" type="password" [(ngModel)]="password" />
+  <br />
+  <input
+    class="btn btn-primary"
+    style="margin-right: 60px; width: 100px"
+    type="button"
+    value="ورود"
+    (click)="btnLoginClicked()"
+  />
+</div>

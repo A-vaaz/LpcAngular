@@ -1,0 +1,22 @@
+<fieldset
+  class="border p-2"
+  style="
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 300px;
+    background-color: #ffffff;
+    direction: rtl;
+    text-align: right;
+  "
+>
+  <!-- String interpolation -->
+  <legend>{{ title }}</legend>
+  <!-- [userName]="defaultUserName" is property binding -->
+  <!--(login)="onlogin($event)" is event binding and special value $event for pass element value.-->
+  <app-login
+    class="container-fluid"
+    [userName]="defaultUserName"
+    [password]="defaultPassword"
+    (login)="onlogin($event)"
+  ></app-login>
+</fieldset>
