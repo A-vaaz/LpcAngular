@@ -1,0 +1,18 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead [ngClass]="themeClass" style="color: white">
+      <tr>
+        <th>ردیف</th>
+        <th>نام</th>
+        <th>نام خانوادگی</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.firstName }}</td>
+        <td>{{ item.lastName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

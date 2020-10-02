@@ -1,0 +1,27 @@
+<div style="color: white">
+  <nav
+    class="navbar"
+    [ngClass]="{
+      'bg-info': lightTheme,
+      'bg-dark': !lightTheme
+    }"
+  >
+    <a class="navbar-brand" style="color: white" href="#">آموزش Directive</a>
+    <div class="custom-control custom-switch">
+      <input
+        type="checkbox"
+        class="custom-control-input"
+        id="customSwitches"
+        [(ngModel)]="lightTheme"
+      />
+      <label class="custom-control-label" for="customSwitches">تم روشن</label>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <app-grid
+      [data]="data"
+      [themeClass]="lightTheme ? 'bg-info' : 'bg-dark'"
+    ></app-grid>
+  </div>
+</div>
